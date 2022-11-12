@@ -7,12 +7,14 @@ module Middleman
 
       # A helper module for highlighting code
       def self.highlight(code, language=nil, opts={})
+        lang_lexer = Rouge::Lexer.find_fancy(language, code) || Rouge::Lexers::PlainText
+        lang_tag = lang_lexer.tag
         if options[:escape]
           # Use the Escape lexer if user passed :escape => true
           Rouge::Formatter.enable_escape!
-          lexer = Rouge::Lexers::Escape.new(start: '<!', end: '!>', lang: language)
+          lexer = Rouge::Lexers::Escape.new(start: '<!', end: '!>', lang: lang_tag)
         else
-          lexer = Rouge::Lexer.find_fancy(language, code) || Rouge::Lexers::PlainText
+          lexer = lang_lexer
         end
 
         highlighter_options = options.to_h.merge(opts)
