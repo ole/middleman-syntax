@@ -18,7 +18,7 @@ module Middleman
         end
 
         highlighter_options = options.to_h.merge(opts)
-        highlighter_options[:css_class] = [ highlighter_options[:css_class], lexer.tag ].join(' ')
+        highlighter_options[:css_class] = [ highlighter_options[:css_class], lang_tag ].join(' ')
         lexer_options = highlighter_options.delete(:lexer_options)
 
         formatter = Middleman::Syntax::Formatters::HTML.new(highlighter_options)
