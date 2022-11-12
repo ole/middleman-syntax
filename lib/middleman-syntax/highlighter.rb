@@ -12,7 +12,7 @@ module Middleman
         if options[:escape]
           # Use the Escape lexer if user passed :escape => true
           Rouge::Formatter.enable_escape!
-          lexer = Rouge::Lexers::Escape.new(start: '<!', end: '!>', lang: lang_tag)
+          lexer = Rouge::Lexers::Escape.new(start: '{{{', end: '}}}', lang: lang_tag)
         else
           lexer = lang_lexer
         end
