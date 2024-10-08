@@ -3,8 +3,7 @@
 `middleman-syntax` is an extension for the [Middleman] static site generator that adds syntax highlighting via [Rouge](https://github.com/jayferd/rouge).
 
 [![Gem Version](https://badge.fury.io/rb/middleman-syntax.svg)][gem]
-[![Build Status](https://travis-ci.org/middleman/middleman-syntax.svg)][travis]
-[![Dependency Status](https://gemnasium.com/middleman/middleman-syntax.svg?travis)][gemnasium]
+[![CI](https://github.com/middleman/middleman-syntax/actions/workflows/ci.yml/badge.svg)](https://github.com/middleman/middleman-syntax/actions/workflows/ci.yml)
 [![Code Quality](https://codeclimate.com/github/middleman/middleman-syntax.svg)][codeclimate]
 
 ## Installation
@@ -16,9 +15,7 @@ gem install middleman
 middleman init MY_PROJECT
 ```
 
-If you already have a Middleman project: Add `gem "middleman-syntax"` to your `Gemfile` and run `bundle install`.
-
-**This plugin will not work on Ruby 1.8!** Rouge requires 1.9+, so we do too.
+If you already have a Middleman project, add `gem "middleman-syntax"` to your `Gemfile` and run `bundle install`.
 
 ## Configuration
 
@@ -197,7 +194,7 @@ The best way to get quick responses to your issues and swift fixes to your bugs 
 
 ## Donate
 
-[Click here to lend your support to Middleman](https://spacebox.io/s/4dXbHBorC3)
+[Click here to lend your support to Middleman](https://github.com/sponsors/tdreyno)
 
 ## License
 
@@ -205,7 +202,5 @@ Copyright (c) 2012-2014 Benjamin Hollis. MIT Licensed, see [LICENSE] for details
 
 [middleman]: http://middlemanapp.com
 [gem]: https://rubygems.org/gems/middleman-syntax
-[travis]: http://travis-ci.org/middleman/middleman-syntax
-[gemnasium]: https://gemnasium.com/middleman/middleman-syntax
 [codeclimate]: https://codeclimate.com/github/middleman/middleman-syntax
 [LICENSE]: https://github.com/middleman/middleman-syntax/blob/master/LICENSE.md
